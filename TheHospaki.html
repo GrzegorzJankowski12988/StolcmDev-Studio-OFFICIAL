@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheHospaki - Oficjalna Strona Gry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            redsoft: '#ff1f4c',
+            darkbg: '#0d0d0d'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.6s ease-in-out;
+    }
+    .image-container img.bottom {
+      opacity: 1;
+      z-index: 1;
+    }
+    .image-container img.top {
+      opacity: 0;
+      z-index: 2;
+    }
+    .image-container:hover img.top {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-darkbg text-white font-sans overflow-x-hidden">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-[#111] border-b border-redsoft">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="h-7 w-7 object-contain transition-transform duration-300 hover:scale-125" />
+      </a>
+      <span class="text-2xl font-bold text-redsoft">TheHospaki</span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#about" class="hover:text-redsoft transition">O grze</a>
+      <a href="#characters" class="hover:text-redsoft transition">Bohaterowie</a>
+<a href="#trailer" class="hover:text-redsoft transition">Zwiastun</a>
+      <a href="#opinions" class="hover:text-redsoft transition">Opinie</a>
+      <a href="https://drive.google.com/drive/folders/1nunkO8g6c2U2dXc0Etd4nHthSCV4VTGY?hl=pl" 
+         class="hover:text-redsoft transition" 
+         target="_blank" 
+         rel="noopener noreferrer">
+         Pobierz
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="TheHospaki.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-black/60 z-10"></div>
+  <div class="relative z-20 animate-fadeInUp">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Tnij & siekaj - The Hospaki</h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto">Przełomowa gra Hack & Slash z humorem, żartami i epickimi walkami, która zdobyła serca graczy!</p>
+  </div>
+</section>
+
+<!-- About Game -->
+<section id="about" class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-10">O grze</h2>
+  <p class="text-lg text-gray-300 leading-relaxed text-center">
+    The Hospaki to pierwsza gra naszego studia, która okazała się niespodziewanym sukcesem. 
+    Gracze uwielbiają jej oryginalność, humorystyczny klimat i intensywną akcję. Hack and slash pełen żartów, 
+    gdzie postacie przemierzają wymiary, walcząc z bossami i próbując uratować swojego przyjaciela przed jego złą osobowością - Depressem.
+  </p>
+</section>
+
+<!-- Characters -->
+<section id="characters" class="py-20 px-6 bg-[#111]" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-12">Bohaterowie</h2>
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <!-- Kapura -->
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl hover:shadow-redsoft transition duration-500">
+      <div class="image-container w-full h-64 rounded-lg mb-4">
+        <img src="Kapura.png" alt="Kapura" class="bottom rounded-lg" />
+        <img src="Kapura2.png" alt="Kapura2" class="top rounded-lg" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Kapura</h3>
+      <p class="text-gray-400 text-sm">Mały czerwony ludzik z Bionicle inspirowany Mario. Posiada zdolność cięcia całego ekranu i strzelania pociskami energii. Walczy ze swoją złą osobowością - Depresso.</p>
+    </div>
+
+    <!-- Cycu -->
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl hover:shadow-redsoft transition duration-500">
+      <div class="image-container w-full h-64 rounded-lg mb-4">
+        <img src="Cycu.png" alt="Cycu" class="bottom rounded-lg" />
+        <img src="Cycu2.png" alt="Cycu2" class="top rounded-lg" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Spoko Lodziarz</h3>
+      <p class="text-gray-400 text-sm">Robot z maszyny do lodu z demencją i portal gunem. Po odblokowaniu formy shinigami potrafi walczyć jak wojownik z anime. Fan kurczaka, ryżu i kreatyny.</p>
+    </div>
+
+    <!-- Kotu -->
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl hover:shadow-redsoft transition duration-500">
+      <div class="image-container w-full h-64 rounded-lg mb-4">
+        <img src="Kotu.png" alt="Kotu" class="bottom rounded-lg" />
+        <img src="Kotu2.png" alt="Kotu2" class="top rounded-lg" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-2">Szablozębny Imperator</h3>
+      <p class="text-gray-400 text-sm">Niepoczytalny samuraj w czerwonej zbroi, który rozwozi dzieciom sznycelki. Jego ognisty miecz pozwala mu odradzać się z popiołów. Uwielbia cebulę i chaos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trailer Section -->
+<section id="trailer" class="py-20 px-6 bg-black text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-10 text-redsoft">Zobacz zwiastun</h2>
+  <a href="https://www.youtube.com/watch?v=KonKRVnPXvA" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="inline-block relative w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg group">
+    
+    <img src="https://img.youtube.com/vi/KonKRVnPXvA/maxresdefault.jpg" alt="Zwiastun" class="w-full transition-transform duration-300 group-hover:scale-105" />
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <div class="bg-redsoft text-white text-lg font-semibold px-6 py-3 rounded shadow hover:bg-red-600 transition">
+        ▶ 
+      </div>
+    </div>
+  </a>
+</section>
+
+<!-- Opinions -->
+<section id="opinions" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-12">Opinie graczy</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-[#1a1a1a] p-6 rounded-lg shadow-lg border-l-4 border-redsoft">
+      <p class="text-gray-300 italic">"To najzabawniejsza gra, jaką grałem od lat! Mega stylowa!"</p>
+      <div class="text-redsoft font-bold mt-4">- Maryanek</div>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-lg shadow-lg border-l-4 border-redsoft">
+      <p class="text-gray-300 italic">"Muzyka zmieniająca się przy combo to sztos! Gimper i Błażej dodali uroku!"</p>
+      <div class="text-redsoft font-bold mt-4">- Pan Dziekan</div>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-lg shadow-lg border-l-4 border-redsoft">
+      <p class="text-gray-300 italic">"Depresso to antagonista roku. Pomysł i wykonanie świetne."</p>
+      <div class="text-redsoft font-bold mt-4">- Kuczikugan</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0a0a0a] py-6 text-center text-sm text-gray-400 border-t border-redsoft">
+  <p>&copy; 2025 StolcmDev Studio. Wszelkie prawa zastrzeżone.</p>
+  <div class="mt-2 flex justify-center gap-4 text-lg">
+    <a href="https://www.facebook.com/profile.php?id=100013977912502" class="hover:text-redsoft">Facebook</a>
+    <a href="https://www.youtube.com/@LevviC137/videos" class="hover:text-redsoft">YouTube</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="hover:text-redsoft">GitHub</a>
+  </div>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+</body>
+</html>

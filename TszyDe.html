@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gra TszyDe - Oficjalna Strona Gry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            redsoft: '#ff1f4c',
+            darkbg: '#0d0d0d'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-darkbg text-white font-sans overflow-x-hidden">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-[#111] border-b border-redsoft">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center space-x-3">
+  <a href="index.html">
+    <img src="logo.png" alt="Logo" class="h-7 w-7 object-contain transition-transform duration-300 hover:scale-125" />
+  </a>
+  <span class="text-2xl font-bold text-redsoft">Gra TszyDe</span>
+</div>
+
+    <nav class="hidden md:flex space-x-6">
+      <a href="#o-grze" class="hover:text-redsoft transition">O grze</a>
+      <a href="#galeria" class="hover:text-redsoft transition">Galeria</a>
+      <a href="#prezentacja" class="hover:text-redsoft transition">Prezentacja</a>
+      <a href="https://drive.google.com/file/d/1bj4BB4pJ1Pc_V40ntsbVNRkwcUCg6st0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="hover:text-redsoft transition">Pobierz</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="Roxie.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-black/60 z-10"></div>
+  <div class="relative z-20 animate-fadeInUp">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Wejdź do świata TszyDe</h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto">Przełomowa gra 3D pełna zaawansowanej technologii i epickich przygód. Sprawi że nie znajdziesz różnicy między grą a prawdziwym światem.</p>
+  </div>
+</section>
+
+<!-- O grze -->
+<section id="o-grze" class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-10">O grze</h2>
+  <p class="text-lg text-gray-300 leading-relaxed text-center">
+    „Gra TszyDe” to dynamiczna produkcja łącząca nowoczesną grafikę 3D z wciągającą fabułą i intensywną akcją. 
+    Gracz wciela się bohaterkę Roxie która chyba jest uczennicą. Tak szczerze to małą o niej wiem. Ale jest bardzo ładna i mój ziomek ją narysował więc macie tutaj jej dużo rysunków.
+  </p>
+</section>
+<!-- Galeria -->
+<section id="galeria" class="py-20 px-6 bg-[#111]" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-12">Galeria</h2>
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Zdjęcie 1 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r1.png" alt="Zrzut ekranu 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+    <!-- Zdjęcie 2 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r2.png" alt="Zrzut ekranu 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+    <!-- Zdjęcie 3 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r3.png" alt="Zrzut ekranu 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+    <!-- Zdjęcie 4 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r4.png" alt="Zrzut ekranu 4" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+    <!-- Zdjęcie 5 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r5.png" alt="Zrzut ekranu 5" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+    <!-- Zdjęcie 6 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-lg bg-black">
+      <img src="r6.png" alt="Zrzut ekranu 6" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" />
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 border-2 border-redsoft rounded-xl"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Prezentacja -->
+<section id="prezentacja" class="py-20 px-6 bg-black text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-10 text-redsoft">Zobacz prezentację</h2>
+  <a href="https://www.youtube.com/watch?v=Xs8Pf1Ra7C8" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="inline-block relative w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg group">
+    
+    <img src="d.png" alt="Prezentacja" class="w-full transition-transform duration-300 group-hover:scale-105" />
+
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <div class="bg-redsoft text-white text-lg font-semibold px-6 py-3 rounded shadow hover:bg-red-600 transition">
+        ▶ 
+      </div>
+    </div>
+  </a>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-[#0a0a0a] py-6 text-center text-sm text-gray-400 border-t border-redsoft">
+  <p>&copy; 2025 StolcmDev Studio. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+</body>
+</html>
