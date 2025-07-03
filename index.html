@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StolcmDev Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            redsoft: '#ff1f4c',
+            darkbg: '#0d0d0d'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-darkbg text-white font-sans overflow-x-hidden">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-[#111] text-white transform -translate-x-full transition-transform duration-300 z-40">
+    <div class="p-6 text-2xl font-bold border-b border-redsoft">Menu</div>
+    <ul class="mt-6 space-y-4 px-6">
+      <li><a href="#hero" class="hover:text-redsoft transition">Strona Główna</a></li>
+      <li><a href="#projekty" class="hover:text-redsoft transition">Projekty</a></li>
+      <li><a href="#gallery" class="hover:text-redsoft transition">Galeria</a></li>
+      <li><a href="#contact" class="hover:text-redsoft transition">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-30" onclick="toggleSidebar()"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#111] border-b border-redsoft">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo" class="h-7 w-7 object-contain transition-transform duration-300 hover:scale-125" />
+        <span class="text-2xl font-bold text-redsoft">StolcmDev Studio</span>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#hero" class="hover:text-redsoft transition">Home</a>
+        <a href="#projekty" class="hover:text-redsoft transition">Projekty</a>
+        <a href="#gallery" class="hover:text-redsoft transition">Galeria</a>
+        <a href="#contact" class="hover:text-redsoft transition">Kontakt</a>
+      </nav>
+      <button onclick="toggleSidebar()" class="text-white text-2xl md:hidden hover:text-redsoft transition">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden" data-aos="fade-up">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 brightness-[.5] saturate-150">
+      <source src="Video.mp4" type="video/mp4" />
+      Twoja przeglądarka nie obsługuje wideo w tle.
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/30 z-10"></div>
+    <div class="relative z-20 max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6" data-aos="fade-up" data-aos-delay="100">
+        Tworzymy nowoczesne gry
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="200">
+        Nasza ekipa deweloperska stawia na nowoczesne technologie i ciągły rozwój.
+      </p>
+      <a href="#projekty" class="px-8 py-3 bg-redsoft hover:bg-red-600 transition rounded-full text-lg font-medium shadow-md" data-aos="fade-up" data-aos-delay="300">
+        Zobacz Nasze Projekty
+      </a>
+    </div>
+  </section>
+
+  <!-- Projekty -->
+  <section id="projekty" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-16">Nasze Projekty</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <a href="thehospaki.html" class="group transform transition duration-300 hover:scale-105 bg-[#1a1a1a] rounded-xl border border-transparent hover:border-redsoft shadow-lg hover:shadow-red-500/20 overflow-hidden block">
+        <div class="h-48 bg-cover bg-center" style="background-image: url('hospaki.png');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 group-hover:text-redsoft transition">The Hospaki</h3>
+          <p class="text-gray-400">Trójka przyjaciół rozwala wszystko co napotka na swojej drodze. Gra pełna humoru i akcji.</p>
+        </div>
+      </a>
+
+      <a href="TszyDe.html" class="group transform transition duration-300 hover:scale-105 bg-[#1a1a1a] rounded-xl border border-transparent hover:border-redsoft shadow-lg hover:shadow-red-500/20 overflow-hidden block">
+        <div class="h-48 bg-cover bg-center" style="background-image: url('gra3d.png');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 group-hover:text-redsoft transition">Gra TszyDe</h3>
+          <p class="text-gray-400">Wykorzystanie nowoczesnej technologii 3D tworząc iluzje prawdziwego świata.</p>
+        </div>
+      </a>
+
+      <a href="IceKing.html" class="group transform transition duration-300 hover:scale-105 bg-[#1a1a1a] rounded-xl border border-transparent hover:border-redsoft shadow-lg hover:shadow-red-500/20 overflow-hidden block">
+        <div class="h-48 bg-cover bg-center" style="background-image: url('iceking.png');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 group-hover:text-redsoft transition">Ice King</h3>
+          <p class="text-gray-400">Świat anime w którym liczą się tylko żywioły i pojedynki na miecze.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 px-6 bg-black" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12">Galeria</h2>
+    <div class="overflow-hidden max-w-6xl mx-auto">
+      <div id="slider" class="flex transition-transform duration-1000 ease-in-out">
+        <div class="min-w-full grid md:grid-cols-3 gap-6">
+          <img src="1.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="2.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="3.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+        </div>
+        <div class="min-w-full grid md:grid-cols-3 gap-6">
+          <img src="4.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="5.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="6.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+        </div>
+        <div class="min-w-full grid md:grid-cols-3 gap-6">
+          <img src="7.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="8.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+          <img src="9.png" class="rounded-lg w-full h-64 object-cover transform transition duration-300 hover:scale-105" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 text-center max-w-2xl mx-auto" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Napisz do nas wiadomość</h2>
+    <p class="text-gray-400 mb-8">
+      Jeżeli masz pomysł, co moglibyśmy dodać do gry albo zauważyłeś jakiś błąd – śmiało napisz do nas!
+    </p>
+    <form action="https://formspree.io/f/xanjkbko" method="POST" class="space-y-6">
+      <input type="text" name="name" placeholder="Imię" required class="w-full p-3 rounded bg-[#1a1a1a] border border-gray-600 focus:outline-none focus:border-redsoft" />
+      <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded bg-[#1a1a1a] border border-gray-600 focus:outline-none focus:border-redsoft" />
+      <textarea name="message" placeholder="Wiadomość" rows="4" required class="w-full p-3 rounded bg-[#1a1a1a] border border-gray-600 focus:outline-none focus:border-redsoft"></textarea>
+      <button type="submit" class="px-6 py-3 bg-redsoft hover:bg-red-600 transition rounded-full font-semibold">Wyślij</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0a0a] py-6 text-center text-sm text-gray-400 border-t border-redsoft">
+    <p>&copy; 2025 StolcmDev Studio. Wszelkie prawa zastrzeżone.</p>
+    <div class="mt-2 flex justify-center gap-4 text-lg">
+      <a href="https://www.facebook.com/profile.php?id=100013977912502" class="hover:text-redsoft">Facebook</a>
+      <a href="https://www.youtube.com/@LevviC137/videos" class="hover:text-redsoft">YouTube</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="hover:text-redsoft">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      const isOpen = sidebar.classList.contains('-translate-x-full');
+      sidebar.classList.toggle('-translate-x-full', !isOpen);
+      overlay.classList.toggle('hidden', isOpen);
+    }
+
+    let currentSlide = 0;
+    const slider = document.getElementById('slider');
+    const totalSlides = 3;
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 4000);
+  </script>
+</body>
+</html>

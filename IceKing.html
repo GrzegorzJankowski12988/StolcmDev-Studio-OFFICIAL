@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IceKing - Oficjalna Strona Gry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bluesoft: '#1f3fff',
+            darkbg: '#0d0d0d'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+            fadeZoomIn: 'fadeZoomIn 1s ease-out forwards',
+            float: 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            fadeZoomIn: {
+              '0%': { opacity: 0, transform: 'scale(0.9)' },
+              '100%': { opacity: 1, transform: 'scale(1)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .bokeh {
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent 40%),
+                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.03), transparent 40%);
+      animation: float 30s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-darkbg text-white font-sans overflow-x-hidden">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-[#111] border-b border-bluesoft">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="logo2.png" alt="Logo" class="h-7 w-7 object-contain transition-transform duration-300 hover:scale-125" />
+      </a>
+      <span class="text-2xl font-bold text-bluesoft">IceKing</span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#about" class="hover:text-bluesoft transition">O grze</a>
+      <a href="#characters" class="hover:text-bluesoft transition">Postacie</a>
+      <a href="#history" class="hover:text-bluesoft transition">Historia gry</a>
+      <a href="https://drive.google.com/file/d/16kOpw6rpJG8xulQbVONbywwZ6dyJS4xA/view?usp=drive_link" target="_blank" class="hover:text-bluesoft transition">Pobierz</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden">
+  <!-- Background image -->
+  <img src="AkiseShigoto.png" alt="IceKing Hero" class="absolute inset-0 w-full h-full object-cover z-0 brightness-50 animate-fadeZoomIn" />
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-black/70 via-blue-900/40 to-transparent z-10"></div>
+  <div class="absolute inset-0 bokeh z-10"></div>
+  <!-- Floating lights -->
+  <div class="absolute w-32 h-32 bg-white/10 rounded-full blur-2xl top-1/4 left-1/3 animate-float z-10"></div>
+  <div class="absolute w-24 h-24 bg-white/10 rounded-full blur-xl bottom-16 right-20 animate-float z-10"></div>
+  <!-- Text -->
+  <div class="relative z-20 animate-fadeInUp">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Wejdź do świata w stylu anime - IceKing</h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto">Nowy wymiar mrocznej przygody na wyspie z pięcioma państwami żywiołów. Jako lodowy wojownik przemieżaj wyspę aby zostać nieżwyciężonym.</p>
+  </div>
+</section>
+
+<!-- About Game -->
+<section id="about" class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-10">O grze</h2>
+  <p class="text-lg text-gray-300 leading-relaxed text-center">
+    IceKing to projekt gry który łączy gatunek Hack & Slash oraz Metroidvanii. Historia osadzona w mroźnym, tajemniczym świecie w stylu anime Shonen. Czeka Cię szybka walka, eksploracja żywiołowych krain oraz fabuła, która wciągnie Cię od pierwszych minut. Przeżyj historię wojownika który z każdym pojedynkiem rozmraża swoje serce.
+  </p>
+</section>
+
+<!-- Characters -->
+<section id="characters" class="py-20 px-6 bg-[#111]" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-12">Postacie</h2>
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl transition duration-300 hover:scale-105 hover:shadow-bluesoft">
+      <img src="Akise.png" alt="Akise" class="w-full h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105" />
+      <h3 class="text-2xl font-semibold mb-2">Akise</h3>
+      <p class="text-gray-400 text-sm">Akise Eienno to wojownik z krainy lodu którego celem jest odnalezienie legendarnej maski cienii. Gdy tego dokonuje okazuje się że dla pokoju musi pokonać samego stwórcę masek.</p>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl transition duration-300 hover:scale-105 hover:shadow-bluesoft">
+      <img src="Shigoto.png" alt="Shigoto" class="w-full h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105" />
+      <h3 class="text-2xl font-semibold mb-2">Shigoto</h3>
+      <p class="text-gray-400 text-sm">Shigoto Ken kiedyś kierował organizacją terrorystyczną która zbierała najpotężniejsze artefakty magiczne. Po przegranym pojedynku z Akise dołączył do niego jako jest sprzymieżeniec.</p>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-xl transition duration-300 hover:scale-105 hover:shadow-bluesoft">
+      <img src="MasksMaker.png" alt="Masks Maker" class="w-full h-64 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105" />
+      <h3 class="text-2xl font-semibold mb-2">Stwórca Masek</h3>
+      <p class="text-gray-400 text-sm">Stwórca pięciu legendarych masek: cenii, czasu, żywiołów, energii i smoczej maski. Jednak przez swoją chciwość stworzył szóstą maskę która stała się zagrożeniem dla wszystkich krain żywiołów.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Game History -->
+<section id="history" class="py-20 px-6 bg-black text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-10 text-bluesoft">Historia Gry</h2>
+  <a href="https://youtu.be/gemGn-gBoBw?si=iRlUKJyuS4h8lzgx" target="_blank" rel="noopener noreferrer" class="inline-block relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-xl group transition-all duration-700 ease-in-out transform hover:scale-[1.02] hover:shadow-bluesoft animate-fadeZoomIn">
+    <img src="m.png" alt="Historia Gry" class="w-full h-auto object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-sm" />
+    <div class="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm">
+      <div class="bg-bluesoft text-white text-xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform group-hover:scale-110">▶</div>
+    </div>
+  </a>
+</section>
+
+<!-- Game Idea -->
+<section id="idea" class="py-20 px-6 bg-[#111] text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-10 text-bluesoft">Pomysł na grę</h2>
+  <a href="https://youtu.be/uQ7DB8yrES8?si=k5bc58qYqFx18Zt1" target="_blank" rel="noopener noreferrer" class="inline-block relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-xl group transition-all duration-700 ease-in-out transform hover:scale-[1.02] hover:shadow-bluesoft animate-fadeZoomIn">
+    <img src="https://img.youtube.com/vi/uQ7DB8yrES8/maxresdefault.jpg" alt="Pomysł na grę" class="w-full h-auto object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-sm" />
+    <div class="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm">
+      <div class="bg-bluesoft text-white text-xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform group-hover:scale-110">▶</div>
+    </div>
+  </a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#0a0a0a] py-6 text-center text-sm text-gray-400 border-t border-bluesoft">
+  <p>&copy; 2025 StolcmDev Studio. Wszelkie prawa zastrzeżone.</p>
+  <div class="mt-2 flex justify-center gap-4 text-lg">
+    <a href="https://www.facebook.com/profile.php?id=100013977912502" class="hover:text-bluesoft">Facebook</a>
+    <a href="https://www.youtube.com/@LevviC137/videos" class="hover:text-bluesoft">YouTube</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="hover:text-bluesoft">GitHub</a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+</body>
+</html>
